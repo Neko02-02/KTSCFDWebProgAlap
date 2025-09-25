@@ -1,98 +1,11 @@
-<!doctype html>
-<html lang="hu">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Szövegformázás: B, I, U, strike, sub, sup</title>
-  <style>
-    body {
-      font-family: "Times New Roman", Times, serif;
-      margin: 30px;
-      color: #111;
-    }
-
-    .frame {
-      border: 2px solid #111;
-      padding: 20px;
-      max-width: 900px;
-      min-height: 420px;
-      box-sizing: border-box;
-    }
-
-    .frame h1 {
-      margin: 0 0 15px 0;
-      font-size: 1.4em;
-    }
-
-    p {
-      line-height: 1.6;
-      margin: 12px 0;
-    }
-
-    /* kétoszlopos sor: bal és jobb oldal ugyanazon sorban */
-    .two-cols {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    /* megjelenés a lábjegyzetnél */
-    .footnote {
-      font-size: 0.9em;
-      margin-top: 8px;
-    }
-
-    /* Pythagorasz blokk */
-    .pyth {
-      margin-top: 18px;
-      font-weight: bold;
-    }
-
-    /* ha szeretnéd, hogy az áthúzott szöveg hasonló legyen a képen láthatóhoz */
-    s, strike, del {
-      text-decoration-thickness: 2px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-
-  <div class="frame">
-    <h1>Szövegformázás: B, I, U, strike, sub, sup</h1>
-
-    <p>Ebbe a részbe a weblap tartalma kerül!</p>
-
-    <div class="two-cols">
-      <div>Ez egy újabb sor, amit az elő sor alá írunk.</div>
-      <div>Most írjuk be a forráskódba egy másik mondat.</div>
-    </div>
-
-    <p>
-      <strong>Ezt a szöveget vastag betűkkel írom</strong>,
-      <em> ezt pedig <strong>vastag és dőlt betűkkel</strong></em>,
-      <u> majd készítek egy aláhúzást is, kézzel írjuk be.</u>
-    </p>
-
-    <p><s>Ezt a szöveget teljesen áthúzom, kézzel írom be a kódot!</s></p>
-
-    <p>
-      Ebben a szövegben néhány szó <sub>lentebb</sub> (alsó indexbe),
-      néhány szó pedig <sup>fentebb</sup> lesz (felső index) megjelenítve.
-    </p>
-
-    <p>Ez 1 m<sup>3</sup> víz<sub>(1)</sub></p>
-
-    <p class="footnote">
-      (1) Ez pl. egy lábjegyzet.
-    </p>
-
-    <p class="pyth">Írja le a Pitagorasz-tételét:</p>
-
-    <p style="font-weight:bold; font-size:1.05em;">
-      a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
-    </p>
-
-  </div>
-
+<body> 
+    (1) <strong> ez valami ami eros, <sub</strong><sub>1</sub>
 </body>
 </html>

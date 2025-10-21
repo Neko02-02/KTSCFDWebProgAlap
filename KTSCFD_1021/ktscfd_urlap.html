@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>KTSCFD - Urlap</title>
+
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box; 
+        
+        }
+
+        section {
+            width: 50rem;
+
+            background-color: rgb(149, 132, 244);
+            padding: 1rem;
+            text-align: center;
+        
+            border-radius: 0.5rem;
+            box-shadow: inset 0 0 0 5rem 0 #00000066,
+                            0.25rem 0.25rem 0.5rem 0.25rem #000000aa;
+        
+        }
+
+        header {
+            width: 50rem;
+            
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        footer {
+            width: 50rem;
+            
+            margin-top: 2rem;
+
+            border-top: 0.1rem solid black;
+
+            padding: 1rem;
+            text-align: right;
+            font-size: 0.8rem;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            text-align: left;
+            gap: 1rem;
+            margin: 1rem;
+        }
+
+        .sidebyside {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: left;
+        }
+
+        .sidebyside>input {
+            width: 10rem;
+        
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        KTSCFD - 1021 - Űrlap feldolgozó
+    </header>
+
+    <section>
+        <form action="feldolgozo.php" target="_self" method="post"
+        name="urlap" id="urlap">
+
+            <label for="nev"> Nev:
+                <input type="text" id="nev" name="nev" required pattern="
+                ([A-ZÁÉYÍÓÖŐÚÜŰ a-záéíóöőúüű]){4,}" title="Ird be a neved"
+                placeholder="Ird be a neved" autofocus autocomplete="off">
+            </label>
+
+            <label for="pin">
+                PIN Kod:
+                <input type="password" id="pin" name="pin" required pattern="
+                ([0-9]){4}" title="4 Szamjegyu PIN kod" placeholder="Ird be a PIN kodot">
+            </label>
+
+            <label for ="fav_fruit">
+                Kedvenc gyumolcs:
+                <input list="gyumolcsok" id="fav_fruit" name="fav_fruit"
+                placeholder="" title="alma, korte, szolo, banan, narancs">
+                <datalist id="gyumolcsok">
+                    <option value="alma">Alma</option>
+                    <option value="banan">Banan</option>
+                    <option value="korte">Korte</option>
+                    <option value="szilva">Szilva</option>
+                    <option value="narancs">Narancs</option>
+                </datalist>
+            </label>
+
+            <label for="age"> 
+                Eletkor:
+                <input type="number" id="age" name="age" min="1" max="100"
+                step="1" title="1 es 100 kozotti ertek" placeholder=""> 
+            </label>
+
+            <label for="feet_size">
+                Labmeret:
+                <input type="number" id="feet_size" name="feet_size" min="25"
+                max="50" step="0.5" title="25 es 50 kozotti ertek" placeholder="">
+            </label>
+
+            <label for="confidence"
+>               Onbizalom:
+                <input type="range" id="confidence" name="confidence"
+                min="0" max="100" step="0.1" title="0 es 100 kozotti ertek">
+            </label>
+        </form>
+        <br>
+
+        <div class="sidebyside">
+            <input type="submit" value="elkuld" form="urlap">
+            <input type="submit" balue="elkudl elenorze nelkul"
+            formnovalidate form="urlap"
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <p>Forras: <a href="http://html5doctor.com/" target="_blank">
+        http://html5doctor.com/ </a></p>
+
+        <p>Formatumok: <a href="https://www.html5pattern.com/"
+        target="_blank">https://www.html5pattern.com</a></p>
+
+        <p>JavaScript RegExp: <a href="https://www.w3schools.com/jsref/
+        jsref_obj_regexp.asp" target="_blank">https://www.w3schools.com/jsref/
+        jsref_obj_regexp.asp</a></p>
+        
+    </footer>
+    
+
+
+
+
+
+</body>
+
+</html>

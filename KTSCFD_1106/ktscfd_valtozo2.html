@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Muveletek valtozokkal</title>
+</head>
+<body>
+
+    <h2>Javascript  - muveletek valtozoval</h2>
+
+    <p id="szoveg">Udvozlom, nyomja meg a gombot a sorban.</p>
+
+    <button onclick="kiirat()">1. kiiratas</button>
+    <button onclick="szoroz()">2. szorzas</button>
+    <button onclick="vizsgalat()">3. vizsgalat</button>
+
+    <button onclick="valtoztat()">4. valtoztatas</button>
+    <button onclick="kiirat()">6.kiiratas</button>
+    <button onclick="szoroz()">7. szorzas</button>
+    <button onclick="vizsgalat()">8. vizsgalat</button>
+
+    <script>
+        let szam1=5;
+        let szam2=10;
+
+        function kiirat() {
+            document.getElementById("szoveg").innerHTML = "a ket valtozo erteke:" + szam1 + " es "
+            + szam2;
+        }
+
+        function szoroz() {
+            document.getElementById("szoveg").innerHTML = "a szorozatunk: " + szam1*szam2;
+        }
+
+        function vizsgalat() {
+            if (szam1 > szam2)
+            {
+            document.getElementById("szoveg").innerHTML = szam1 + "nagyobb, mint a " +
+            szam2;
+            }
+            else if (szam2 > szam1)
+            {
+
+            document.getElementById("szoveg").innerHTML = szam2 + "nagyobb, mint a " + szam1
+            }
+            else
+            {
+            document.getElementById("szoveg").innerHTML = szam1 + " es " + szam2 + " pontosan egyenloek.";
+
+            }
+            }
+
+        function valtoztat() {
+            szam1 = 200;
+            szam2 = 150;
+        }
+
+
+
+    </script>
+    </body>
+</html>

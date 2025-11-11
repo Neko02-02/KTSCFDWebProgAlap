@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomb Torol</title>
+</head>
+<body>
+
+    <h3>Tomb elemeinek torlese</h3>
+    <strong>Elotte:</strong> <p id="ktscfd"></p>
+    <strong>Utana:</strong> <p id="ktscfd"></p>
+
+    <button onclick="torol0()">Tomb 0. indexu elemenek torlese</button>
+    <button onclick="torol1()">Tomb 1. indexu elemenek torlese</button>
+    <button onclick="torol2()">Tomb 2. indexu elemenek torlese</button>
+
+
+        <script>
+            let prognyelvek = ["HTML5", "CSS3", "JS"]
+            document.getElementById("ktscfd").innerHTML = prognyelvek;
+
+            function torol0() {
+                delete prognyelvek[0];
+                document.getElementById("ktscfd").innerHTML = prognyelvek;
+            }
+
+            function torol1() {
+                delete prognyelvek[1];
+                document.getElementById("ktscfd").innerHTML = prognyelvek;
+            }
+            function torol2() {
+                delete prognyelvek[2];
+                document.getElementById("ktscfd").innerHTML = prognyelvek;
+            }
+            
+        </script>
+    
+</body>
+</html>

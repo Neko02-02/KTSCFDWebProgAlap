@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomb</title>
+
+
+
+</head>
+
+<body>
+
+    <h3>tomb elemeinek elerese, kiirasa</h3>
+
+    <p id="ktscfd"></p>
+
+    <button onclick="elso()">elso elem (0. index)</button>
+    <button onclick="masodik()">masodik elem(1. index)</button>
+    <button onclick="harmadik()">harmadik elem(2. index)</button>
+    <button onclick="osszes()">osszes elem</button>
+
+    <script> 
+        let prognyelvek = ["HTML5", "CSS4", "J5"];
+
+        function elso() {
+            document.getElementById("ktscfd").innerHTML = prognyelvek[0];
+        
+        }
+        function masodik() {
+            document.getElementById("ktscfd").innerHTML = prognyelvek[1];
+        
+        }
+        function harmadik() {
+            document.getElementById("ktscfd").innerHTML = prognyelvek[2];
+        
+        }
+        function osszes() {
+            document.getElementById("ktscfd").innerHTML = prognyelvek;
+        
+        }
+    </script>
+    
+</body>
+
+</html>

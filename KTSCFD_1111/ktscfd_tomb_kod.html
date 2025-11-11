@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomb Kod</title>
+
+
+</head>
+
+<body>
+
+    <h3>tomb elemeinek modositasa</h3>
+
+    <strong>Elotte:</strong> <p id="ktscfd"></p>
+    <strong>Utana</strong> <p id="ktscfd1"></p>
+
+    <button onclick="modosit()">Tombelemek modositasa</button>
+
+    <script>
+        let prognyelvek = ["HTML5", "CSS3", "JS"];
+        document.getElementById("ktscfd").innerhtml = prognyelvek;
+        prognyelvek[1] = "C nyelv";
+
+        function modosit() {
+            document.getElementById("ktscfd").innerhtml = prognyelvek;
+        }
+    </script>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomb Hozzad</title>
+
+</head>
+
+
+<body>
+
+    <h3>Tomb elemeihez hozzaadasa, hossza</h3>
+    <strong>Elotte:</strong> <p id="ktscfd"></p>
+    <strong>Utana</strong> <p id="ktscfd1"></p>
+
+    <strong>Tomb hossza:</strong> <p id="ktscfd2"></p>
+
+    <button onclick="hozzaad()">Uj ertek hozzaadassa</button>
+    <button onclick="hossz()">Tomb hossza</button>
+
+    <script>
+        let prognyelvek = ["HTML5", "CSS3", "JS"];
+        document.getElementById("ktscfd").innerHTML = prognyelvek;
+
+        function hozzaad() {
+            prognyelvek.push("C nyelv"); //itt adunk hozza egy ujabb elemet a tombhoz
+            document.getElementById("ktscfd1").innerHTML = prognyelvek;
+        }
+
+        function hossz() { //itt hatarozzuk meg a tomb hosszat 
+            document.getElementById("ktscf2").innerHTML = prognyelvek.legth;
+
+        }
+    </script>
+
+
+</body>
+
+
+</html>

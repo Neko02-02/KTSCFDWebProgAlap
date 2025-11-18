@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>java szkript objektum konvertalasa json string</h2>
+    <div class="jsonString" style="font-family: monospace;"></div>
+    
+</body>
+
+<script>
+    const jsonObjSB = {
+        Egyetem: "Tokaj Hegyalja Egyetem",
+        Varos: "Sarospatak",
+        Iranyitoszam: "3950",
+        Nev: "Spisak Bence"
+    }
+
+    const jsonString = JSON.stringify(jsonObjSB, null, 4);
+
+    const jsonStringDiv = document.querySelector('.jsonString');
+    jsonStringDiv.innerHTML = jsonString;
+</script>
+</html>

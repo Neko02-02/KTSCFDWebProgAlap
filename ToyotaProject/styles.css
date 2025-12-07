@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.car-img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 20px auto;
+}
+
+.video-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer a {
+    color: cyan;
+}
+
+/* CAR MODELS */
+#models {
+    margin-top: 20px;
+}
+
+.car-box {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px 0;
+}

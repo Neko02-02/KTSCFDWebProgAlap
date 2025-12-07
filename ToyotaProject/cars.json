@@ -1,0 +1,9 @@
+{
+    "cars": [
+        { "name": "Toyota AE86 Trueno", "year": 1983, "type": "Sport Coupe" },
+        { "name": "Toyota Supra MK4", "year": 1993, "type": "Grand Tourer" },
+        { "name": "Toyota Prius", "year": 1997, "type": "Hybrid" },
+        { "name": "Corolla Levin", "year": 1983, "type": "Compact" },
+        { "name": "Toyota Hilux", "year": 1968, "type": "Pickup" }
+    ]
+}

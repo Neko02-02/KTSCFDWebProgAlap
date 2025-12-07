@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Toyota - Főoldal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/toyota_logo3.png" alt="Toyota Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="ae86.html">AE86</a>
+        <a href="supra.html">Supra</a>
+        <a href="prius.html">Prius</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Üdvözöllek a Toyota Weboldalon</h1>
+    <p>Ez egy egyszerű HTML5 projekt a Tokaj Hegyalja egyetemi Webprogramozás alapjai órára.</p>
+
+
+    
+    <div class="video-box">
+        <h2>Bemutató videó - AE86</h2>
+
+        <video id="promo" width="600" controls>
+            <source src="videos/video.mp4" type="video/mp4">
+        </video>
+
+        <br><br>
+        <button id="playVideo">Lejátszás</button>
+        <button id="pauseVideo">Szünet</button>
+    </div>
+
+
+    
+    <h2>Toyota modellek (JSON betöltés)</h2>
+    <button id="loadModels">Modellek betöltése</button>
+
+    <div id="models"></div>
+
+
+    
+    <h2>Bejelentkezés</h2>
+
+    <form id="loginForm">
+        <label>Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Jelszó:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <button type="submit">Bejelentkezés</button>
+    </form>
+
+</div>
+
+<footer>
+    <p>Készitette: <b>Bence Spišák</b> - 2025</p>
+    <a href="#">Vissza a lap tetejére</a>
+</footer>
+
+</body>
+</html>

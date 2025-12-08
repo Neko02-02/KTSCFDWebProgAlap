@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+    <h3>onclick</h3>
+    <b>Két szám összege:</b> <p id="neptunkod"></p>
+    <button onclick="osszead(10, 10)">összeadás</button>
+
+    <script>
+        function osszead(szam1, szam2){
+            document.getElementById("neptunkod").innerHTML = szam1 + szam2;
+        }
+    </script>
+</body>
+</html>

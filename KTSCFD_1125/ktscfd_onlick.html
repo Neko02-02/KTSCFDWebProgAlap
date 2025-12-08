@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick JavaScript</title>
+</head>
+<body>
+    <h3>Eseménytípus:</h3>
+    <b>Két szám összege:</b> <p id="neptunkod"></p>
+    <button id="gomb">összeadás</button>
+
+    <script>
+        document.getElementById("gomb").addEventListener("click", function(){osszead(10,30)});
+        
+        function osszead(szam1, szam2){
+            document.getElementById("neptunkod").innerHTML = szam1 + szam2;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Órarend</title>
+
+  <style>
+    body {
+      background:white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #3498db;
+      color: white;
+    }
+
+    .time-col {
+      background: #ecf0f1;
+      font-weight: bold;
+      width: 80px;
+    }
+
+    .ora-box {
+      background: #d6eaf8;
+      border-radius: 6px;
+      padding: 6px;
+      font-weight: bold;
+      border: 1px solid #a9cce3;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Heti órarend</h1>
+
+<table id="orarend-table">
+  <tr>
+    <th>Idő</th>
+    <th>Hétfő</th>
+    <th>Kedd</th>
+    <th>Szerda</th>
+    <th>Csütörtök</th>
+    <th>Péntek</th>
+  </tr>
+</table>
+
+<script>
+  const orarend = {
+    "orarend": {
+      "ora": [
+        {"targy":"Programozás alapjai","idopont":{"nap":"Hétfő","tol":8,"ig":11}},
+        {"targy":"Bevezetés TEX-be","idopont":{"nap":"Hétfő","tol":14,"ig":17.}},
+        {"targy":"Webprogramozás alapjai","idopont":{"nap":"Kedd","tol":8,"ig":9.}},
+        {"targy":"Diszkrét matematika és lineáris algebra","idopont":{"nap":"Kedd","tol":10,"ig":13}},
+        {"targy":"Kutatás és tanulás módszertan","idopont":{"nap":"Szerda","tol":13,"ig":14.}},
+        {"targy":"Idegen nyelv I.","idopont":{"nap":"Szerda","tol":15.,"ig":18.}},
+        {"targy":"Webprogramozás alapjai","idopont":{"nap":"Csütörtök","tol":8,"ig":9.}},
+        {"targy":"Számítógép architektúrák","idopont":{"nap":"Csütörtök","tol":10,"ig":11. }},
+        {"targy":"Az informatika logikai alapjai","idopont":{"nap":"Csütörtök","tol":16,"ig":19}},
+        {"targy":"Bevezetés az informatikába","idopont":{"nap":"Péntek","tol":13,"ig":17}}
+      ]
+    }
+  };
+
+  const napok = ["Hétfő","Kedd","Szerda","Csütörtök","Péntek"];
+  const tabla = document.getElementById("orarend-table");
+  const oraLista = orarend.orarend.ora;
+
+  const kezdIdo = 8;
+  const vegIdo = 19;
+
+
+  const foglalt = {};
+
+  for (let ora = kezdIdo; ora <= vegIdo; ora++) {
+    const tr = document.createElement("tr");
+
+    const tdTime = document.createElement("td");
+    tdTime.className = "time-col";
+    tdTime.textContent = ora + ":00";
+    tr.appendChild(tdTime);
+
+
+    napok.forEach(nap => {
+
+
+      if (foglalt[nap + "-" + ora]) return;
+
+
+      const akt = oraLista.find(o => Math.floor(o.idopont.tol) === ora && o.idopont.nap === nap);
+
+      const td = document.createElement("td");
+
+      if (akt) {
+   
+        const hossza = Math.ceil(akt.idopont.ig - akt.idopont.tol);
+
+        td.rowSpan = hossza;
+        td.innerHTML = `<div class="ora-box">${akt.targy}<br><small>${akt.idopont.tol}:00 – ${akt.idopont.ig}:00</small></div>`;
+
+    
+        for (let i = 0; i < hossza; i++) {
+          foglalt[nap + "-" + (ora + i)] = true;
+        }
+
+      } else {
+    
+        td.textContent = "";
+      }
+
+      tr.appendChild(td);
+    });
+
+    tabla.appendChild(tr);
+  }
+</script>
+
+</body>
+</html>

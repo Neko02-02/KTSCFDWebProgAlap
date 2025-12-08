@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömb</title>
+</head>
+<body>
+    
+    <div id="jsonneptunkod">
+    </div>
+    <script>
+        const KIObj = {
+            "name": "Spisak Bence"
+            "age": 20
+            "cars":[
+                {"name": "Toyota", "models":["Corolla","Yaris","CHR"]},
+                {"name": "Ford", "models":["Mustang", "Raptor","Fiesta"]}
+                {"name": "BMW", "models":["320","m5","x5"]}
+                {"name": "Fiat", "models":["500","Panda","Tipo"]}
+            ]
+        }
+        const jsonneptunkod = document.getElementById('jsonneptunkod');
+
+        const h2 = document.createElement('h2');
+        h2.innerHTML = `<span><b> ${KIObj["name"]}</b></span> (${KIObj["age"]}`;
+        jsonneptunkod.appendChild(h2);
+
+        for(let i= 0; i < KIobj["cars"].length; i++){
+            
+        }
+
+    </script>
+    
+</body>
+</html>

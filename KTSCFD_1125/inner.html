@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+
+    <h3>Inner HTML</h3>
+    
+    <p id="neptunkod1">Ennek olvassa ki a tartalmát.</p>
+    <p id="neptunkod2">Ennek írja át a tartalmát.</p>
+    <button onclick="kiolvas()">Kiolvas</button>
+    <button onclick="atir()">Átír</button>
+
+    <script>
+        function kiolvas(){
+            alert(document.getElementById("neptunkod1").innerHTML);
+        }
+        function atir(){
+            document.getElementById("neptunkod2").innerHTML="Átírja a tartalmát.";
+        }
+    </script>
+
+</body>
+</html>
